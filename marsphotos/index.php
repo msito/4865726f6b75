@@ -3,10 +3,10 @@
     <head>
         <title>Mars Photos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style rel="stylesheet" href="/css/marsphotos.css"></style>
+        <style rel="stylesheet" href="/marsphotos/css/marsphotos.css"></style>
 
-        <script src="/javascript/jquery.min.js"></script>
-	<script src="/javascript/marsphotos.js"></script>
+        <script src="/marsphotos/javascript/jquery.min.js"></script>
+	<script src="/marsphotos/javascript/marsphotos.js"></script>
 
         <script>
             $(document).ready(function () {
