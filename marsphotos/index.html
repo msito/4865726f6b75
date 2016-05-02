@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mars Photos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/marsphotos/css/marsphotos.css.php"></link>
+
+        <script src="/marsphotos/javascript/jquery.min.js"></script>
+	<script src="/marsphotos/javascript/marsphotos.js.php"></script>
+	<script src="/marsphotos/javascript/action.js.php"></script>
+    </head>
+    <body>
+        <div id="contents">        
+            <div id="popup"></div>
+            <div id="forpopup"><a href="#">Close</a></div>
+            <h1>Mars Photos</h1>
+            <div id="exploreform">
+                <form method="POST" action="#">
+                    <div class="wrapper">
+                        <label for="rover_list" class="required">* Rover Choice:</label>
+                        <select id="rover_list" required >
+                            <option value="">Please select rover of your choice</option>
+                            <option value="curiosity">Curiosity</option>
+                            <option value="opportunity">Opportunity</option>
+                            <option value="spirit">Spirit</option>
+                        </select>
+                    </div>
+                    <div id="roverdependent">
+                        <div class="wrapper">
+                            <div id="cameras">
+                                <label for="camera_list">Cameras On Rover:</label>
+                                <select id="camera_list">
+                                    <option name="ALL" value="">All Cameras</option>
+                                    <option name="FHAZ" value="FHAZ">Front Hazard Avoidance Camera</option>
+                                    <option name="RHAZ" value="RHAZ">Rear Hazard Avoidance Camera</option>
+                                    <option name="MAST" value="MAST">Mast Camera</option>
+                                    <option name="CHEMCAM" value="CHEMCAM">Chemistry and Camera Complex</option>
+                                    <option name="MAHLI" value="MAHLI">Mars Hand Lens Imager</option>
+                                    <option name="MARDI" value="MARDI">Mars Descent Imager</option>
+                                    <option name="NAVCAM" value="NAVCAM">Navigation Camera</option>
+                                    <option name="PANCAM" value="PANCAM">Panoramic Camera</option>
+                                    <option name="MINITES" value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="requireddates">
+                            <div class="required">* Please enter either Sol or Earth Date.</div>
+                            <div class="wrapper">
+                                <div id="soldate">                
+                                    <label for="soldate">Sol (Martian Rotation):</label>
+                                    <!-- type number is not supported for IE9 or earlier version -->
+                                    <input type="number" name="soldate" min="0" max="1000" value="0" />
+                                    <div id="soldesc" class="hidedesc">Available sol: between 0 to <span id="rovermaxsol"></span></div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div id="earthdate">
+                                    <label for="earthdate">Earth Date:</label>
+                                    <!-- type number is not supported for IE -->
+                                    <input type="date" name="earthdate" min="2015-01-01" max="2016-01-01" />
+                                    <div id="eddesc" class="hidedesc">Available earth date: between <span id="roverlandingdate"></span> and <span id="rovermaxdate"></span></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="wrapper">
+                            <div id="clear"><a href="#">Clear</a></div>
+                        </div>
+
+                    </div>
+                    <div style="clear:both"></div>
+                </form>
+                <div style="clear:both"></div>
+            </div>
+
+            <div style="clear:both"></div>
+           
+            
+            <div id="results">
+                Please select Rover of your choice to begin.
+            </div>
+            <div style="clear:both"></div>
+
+
+            <div id="pager"></div>
+        </div>
+    </body>
+</html>
